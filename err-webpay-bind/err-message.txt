@@ -1,0 +1,125 @@
+/******************************************************************************
+ * build.propertiesに「sbt.version=0.13.7」追記後、playコマンドを実行
+ ******************************************************************************/
+c:\play\play-2.2.3\project\memoriaCloud>play
+Java HotSpot(TM) Client VM warning: ignoring option MaxPermSize=256M; support wa
+s removed in 8.0
+java.lang.UnsupportedOperationException: Position.start on class scala.reflect.i
+nternal.util.OffsetPosition
+        at scala.reflect.internal.util.Position.start(Position.scala:114)
+        at sbt.internals.parser.SbtParser.sbt$internals$parser$SbtParser$$conver
+tStatement$1(SbtParser.scala:142)
+        at sbt.internals.parser.SbtParser$$anonfun$4.apply(SbtParser.scala:147)
+        at sbt.internals.parser.SbtParser$$anonfun$4.apply(SbtParser.scala:147)
+        at scala.collection.TraversableLike$$anonfun$flatMap$1.apply(Traversable
+Like.scala:251)
+        at scala.collection.TraversableLike$$anonfun$flatMap$1.apply(Traversable
+Like.scala:251)
+        at scala.collection.immutable.List.foreach(List.scala:318)
+        at scala.collection.TraversableLike$class.flatMap(TraversableLike.scala:
+251)
+        at scala.collection.AbstractTraversable.flatMap(Traversable.scala:105)
+        at sbt.internals.parser.SbtParser.splitExpressions(SbtParser.scala:147)
+        at sbt.internals.parser.SbtParser.<init>(SbtParser.scala:60)
+        at sbt.EvaluateConfigurations$.splitExpressions(EvaluateConfigurations.s
+cala:227)
+        at sbt.EvaluateConfigurations$.parseConfiguration(EvaluateConfigurations
+.scala:69)
+        at sbt.EvaluateConfigurations$.evaluateSbtFile(EvaluateConfigurations.sc
+ala:107)
+        at sbt.Load$.sbt$Load$$loadSettingsFile$1(Load.scala:710)
+        at sbt.Load$$anonfun$sbt$Load$$memoLoadSettingsFile$1$1.apply(Load.scala
+:715)
+        at sbt.Load$$anonfun$sbt$Load$$memoLoadSettingsFile$1$1.apply(Load.scala
+:714)
+        at scala.Option.getOrElse(Option.scala:120)
+        at sbt.Load$.sbt$Load$$memoLoadSettingsFile$1(Load.scala:714)
+        at sbt.Load$$anonfun$loadFiles$1$2.apply(Load.scala:721)
+        at sbt.Load$$anonfun$loadFiles$1$2.apply(Load.scala:721)
+        at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike
+.scala:244)
+        at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike
+.scala:244)
+        at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.
+scala:59)
+        at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:47)
+        at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+
+        at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+        at sbt.Load$.loadFiles$1(Load.scala:721)
+        at sbt.Load$.discoverProjects(Load.scala:732)
+        at sbt.Load$.discover$1(Load.scala:545)
+        at sbt.Load$.loadTransitive(Load.scala:574)
+        at sbt.Load$.loadProjects$1(Load.scala:442)
+        at sbt.Load$.loadUnit(Load.scala:446)
+        at sbt.Load$$anonfun$18$$anonfun$apply$11.apply(Load.scala:281)
+        at sbt.Load$$anonfun$18$$anonfun$apply$11.apply(Load.scala:281)
+        at sbt.BuildLoader$$anonfun$componentLoader$1$$anonfun$apply$4$$anonfun$
+apply$5$$anonfun$apply$6.apply(BuildLoader.scala:91)
+        at sbt.BuildLoader$$anonfun$componentLoader$1$$anonfun$apply$4$$anonfun$
+apply$5$$anonfun$apply$6.apply(BuildLoader.scala:90)
+        at sbt.BuildLoader.apply(BuildLoader.scala:140)
+        at sbt.Load$.loadAll(Load.scala:334)
+        at sbt.Load$.loadURI(Load.scala:289)
+        at sbt.Load$.load(Load.scala:285)
+        at sbt.Load$.load(Load.scala:276)
+        at sbt.Load$.apply(Load.scala:130)
+        at sbt.Load$.buildPluginDefinition(Load.scala:819)
+        at sbt.Load$.buildPlugins(Load.scala:785)
+        at sbt.Load$.plugins(Load.scala:773)
+        at sbt.Load$.loadUnit(Load.scala:431)
+        at sbt.Load$$anonfun$18$$anonfun$apply$11.apply(Load.scala:281)
+        at sbt.Load$$anonfun$18$$anonfun$apply$11.apply(Load.scala:281)
+        at sbt.BuildLoader$$anonfun$componentLoader$1$$anonfun$apply$4$$anonfun$
+apply$5$$anonfun$apply$6.apply(BuildLoader.scala:91)
+        at sbt.BuildLoader$$anonfun$componentLoader$1$$anonfun$apply$4$$anonfun$
+apply$5$$anonfun$apply$6.apply(BuildLoader.scala:90)
+        at sbt.BuildLoader.apply(BuildLoader.scala:140)
+        at sbt.Load$.loadAll(Load.scala:334)
+        at sbt.Load$.loadURI(Load.scala:289)
+        at sbt.Load$.load(Load.scala:285)
+        at sbt.Load$.load(Load.scala:276)
+        at sbt.Load$.apply(Load.scala:130)
+        at sbt.Load$.defaultLoad(Load.scala:36)
+        at sbt.BuiltinCommands$.doLoadProject(Main.scala:481)
+        at sbt.BuiltinCommands$$anonfun$loadProjectImpl$2.apply(Main.scala:475)
+        at sbt.BuiltinCommands$$anonfun$loadProjectImpl$2.apply(Main.scala:475)
+        at sbt.Command$$anonfun$applyEffect$1$$anonfun$apply$2.apply(Command.sca
+la:58)
+        at sbt.Command$$anonfun$applyEffect$1$$anonfun$apply$2.apply(Command.sca
+la:58)
+        at sbt.Command$$anonfun$applyEffect$2$$anonfun$apply$3.apply(Command.sca
+la:60)
+        at sbt.Command$$anonfun$applyEffect$2$$anonfun$apply$3.apply(Command.sca
+la:60)
+        at sbt.Command$.process(Command.scala:92)
+        at sbt.MainLoop$$anonfun$1$$anonfun$apply$1.apply(MainLoop.scala:98)
+        at sbt.MainLoop$$anonfun$1$$anonfun$apply$1.apply(MainLoop.scala:98)
+        at sbt.State$$anon$1.process(State.scala:184)
+        at sbt.MainLoop$$anonfun$1.apply(MainLoop.scala:98)
+        at sbt.MainLoop$$anonfun$1.apply(MainLoop.scala:98)
+        at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17)
+        at sbt.MainLoop$.next(MainLoop.scala:98)
+        at sbt.MainLoop$.run(MainLoop.scala:91)
+        at sbt.MainLoop$$anonfun$runWithNewLog$1.apply(MainLoop.scala:70)
+        at sbt.MainLoop$$anonfun$runWithNewLog$1.apply(MainLoop.scala:65)
+        at sbt.Using.apply(Using.scala:24)
+        at sbt.MainLoop$.runWithNewLog(MainLoop.scala:65)
+        at sbt.MainLoop$.runAndClearLast(MainLoop.scala:48)
+        at sbt.MainLoop$.runLoggedLoop(MainLoop.scala:32)
+        at sbt.MainLoop$.runLogged(MainLoop.scala:24)
+        at sbt.StandardMain$.runManaged(Main.scala:53)
+        at sbt.xMain.run(Main.scala:28)
+        at xsbt.boot.Launch$$anonfun$run$1.apply(Launch.scala:57)
+        at xsbt.boot.Launch$.withContextLoader(Launch.scala:77)
+        at xsbt.boot.Launch$.run(Launch.scala:57)
+        at xsbt.boot.Launch$$anonfun$explicit$1.apply(Launch.scala:45)
+        at xsbt.boot.Launch$.launch(Launch.scala:65)
+        at xsbt.boot.Launch$.apply(Launch.scala:16)
+        at xsbt.boot.Boot$.runImpl(Boot.scala:32)
+        at xsbt.boot.Boot$.main(Boot.scala:21)
+        at xsbt.boot.Boot.main(Boot.scala)
+[error] java.lang.UnsupportedOperationException: Position.start on class scala.r
+eflect.internal.util.OffsetPosition
+[error] Use 'last' for the full log.
+Project loading failed: (r)etry, (q)uit, (l)ast, or (i)gnore?
